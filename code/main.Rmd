@@ -1,0 +1,46 @@
+---
+title: "Mapeamento Digital do Solo: mapeando o solo usando computadores e conhecimento pedológico^[Palestra proferida no XVIII Congreso Nacional y IX Internacional de la Ciencia del Suelo, realizado no auditório da Universidad Nacional de Ucayali na cidade de Pucallpa, Peru, entre os dias 20 e 23 de maio de 2019.]"
+author: "Alessandro Samuel-Rosa"
+date: "07/05/2019"
+bibliography: biblio.bib
+output: html_document
+---
+
+```{r, eval=FALSE, include=FALSE}
+rmarkdown::render("main.Rmd", output_dir = "../docs", encoding = "UTF-8")
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Histórico, conceitos e definições
+
+Você já deve ter ouvido falar que a Ciência do Solo nasceu na Rússia e que seu pai foi o cientista russo Vasily Vasili'evich Dokuchaev. Para ser merecedor desse título, Dokuchaev estabeleceu, em 1883, a lei básica da ciência do solo, segundo a qual [@Florinsky2012]
+
+> "qualquer... solo é sempre e em qualquer lugar mera função dos seguintes fatores de formação: (1) a natureza (conteúdo e estrutura) da rocha parental; (2) o clima do terreno; (3) a massa e carácter da vegetação; (4) a idade do terreno; e, finalmente, (5) a topografia do terreno."
+
+Dokuchaev acreditava que, se realmente havia relação entre as características do solo e as características dos fatores de formação, então deveria ser possível, pelo menos em teoria, formular e resolver uma equação matemática que descrevesse essa relação. Mas Dokuchaev estava ciente das limitações de seu tempo, sobretudo do fato de que o solo era muito complexo para mensurar com detalhe e era praticamente impossível descrever numericamente os fatores de formação. Assim, inicialmente, a lei básica da ciência do solo serviu mais como um conceito geográfico do solo que permitiu compreender melhor a formação e variação do solo no espaço e no tempo. Esse conceito serviu de alicerce para os estudos de muitos cientistas em várias partes do mundo, acelerando o crescimento e desenvolvimento da Ciência do Solo. Foi a partir desse período que foram realizados os primeiros trabalhos de mapeamento moderno do solo, bem como foram criados os primeiros sistemas modernos de classificação do solo.
+
+Impulsionados pelo pensamento da época, Dokuchaev e seus contemporâneos, bem como cientistas de outras partes do mundo que vieram depois dele, especialmente nos Estados Unidos da América (EUA), dedicaram-se à elaboração de formulações matemáticas que melhor representassem a lei básica da ciência do solo. Inúmeras equações foram apresentadas, mas aquela elaborada pelo cientista russo Sergey Zakharov, em 1927, foi a de maior aceitação e a única capaz de permanecer até os dias atuais. Provavelmente, a versão que você conhece da equação de Zakharov é aquela apresentada, nos anos 1940, em uma publicação em língua inglesa pelo cientista suíço Hans Jenny [@Jenny1941]. Segundo a equação de Zakharov, traduzida por Jenny e adaptada ao conhecimento disponível na época,
+
+$$s = f(cl, o, r, p, t, \ldots)$$
+
+onde $s$ refere-se às características do solo num determinado local, as quais são resultado, função, $f$, da interação dos fatores de formação do solo,
+
+* $cl$, que representa o clima, o conjunto de condições meteorológicas atuantes de maneira cíclica e duradoura
+naquele local,
+* $o$, que refere-se aos organismos vivos, plantas e animais, inclusive os seres humanos,
+* $r$, que representa o relevo ou topografia, a forma da superfície do terreno,
+* $p$, que indica o material de origem do solo, geralmente um material inconsolidado resultante da alteração das rochas,
+* $t$, que refere-se ao tempo durante o qual os agentes intempéricos agem sobre o material de origem do solo e alteram as características deste, e
+* $\ldots$, que refere-se a outros fatores de formação do solo de menor importância naquele local.
+
+Você há de concordar que, depois mais de meio século das primeiras tentativas de Dokuchaev para formular e resolver uma equação que expressasse a relação entre as características do solo e as características dos fatores de sua formação, Jenny encontrava-se em situação bem mais favorável. O volume de dados do solo existente naquela época já era bastante grande, sobretudo nos EUA, onde Jenny trabalhava. Ademais, o período entre guerras, e principalmente durante a II Grande Guerra Mundial, foi marcado por um rápido crescimento do investimento em pesquisas científicas nas áreas da matemática e estatística. Mas mesmo de posse das novas técnicas e ferramentas, Jenny sabia que elas ainda eram limitadas para resolver a equação de formação do solo. Ele sugeriu então que seria mais fácil isolar os fatores, ou seja, resolver equações onde apenas um único fator de formação do solo fosse considerado. Assim, uma equação que considerasse apenas a topografia seria chamada de ‘pedotopofunção’, enquanto que uma ‘pedoclimofunção’ seria aquela que considerasse apenas o clima. Essas pedofunções tiveram grande utilidade nos estudos sobre a gênese do solo nos mais diversos ambientes, sendo amplamente utilizadas ainda hoje.
+
+A corrida espacial que seguiu à II Grande Guerra Mundial teve grande influência sobre a maneira de conduzir novos estudos sobre a variação espacial e temporal do solo, sobretudo a partir dos anos 1960. A produção periódica de dados com cobertura global pelos inúmeros sensores desenvolvidos para observação da superfície e acoplados a satélites orbitais mudaram completamente a maneira de vermos nosso planeta. O advento da Internet e a abertura econômica de diversos países a partir dos anos 1980 facilitaram o acesso dos cientistas do solo a um grande volume de dados relativamente detalhados sobre condições meteorológicas, cobertura vegetal, uso antrópico e relevo, tanto em escala local como global. Não demorou muito para que os cientistas do solo percebessem que os dados sobre as características dos diversos componentes ambientais forneciam uma solução relativamente eficiente para um dos problemas de Dokuchaev, qual seja, a necessidade de descrever numericamente os fatores de formação do solo para que fosse possível resolver a equação matemática da lei básica da ciência do solo [@MooreEtAl1993].
+
+Todos nós sabemos que, apesar dos dados existentes, ainda não foi encontrada uma solução exata para a equação matemática da lei básica da ciência do solo. Uma das principais razões para isso é a complexidade do processo de formação do solo, cuja duração é de magnitude milhares de vezes maior do que a de uma geração humana. Assim, já há muitas décadas, a alternativa mais viável consiste em utilizar ferramentas que forneçam uma solução que seja, pelo menos, aproximada. Alguns dos primeiros exemplos foram apresentados por Jenny, que propunha o ajuste de curvas de regressão simples entre os dados de uma determinada característica do solo e os dados de um fator de formação do solo isolado. Mais tarde, com a corrida armamentista do pós-guerra e o desenvolvimento das ciências exatas em geral, principalmente da informática, novos e mais complexos modelos (geo)estatísticos foram desenvolvidos, a grande maioria deles capazes de produzir uma solução aproximada para a equação de formação do solo [@McKenzieEtAl1999]. Ao conjunto de atividades voltadas ao uso desses modelos (geo)estatísticos para correlacionar as características do solo com as características ambientais para produzir novas informações do solo dá-se o nome de mapeamento digital do solo.
+
+# References
