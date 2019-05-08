@@ -15,47 +15,59 @@ rmarkdown::render("main.Rmd", output_dir = "../docs", encoding = "UTF-8")
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Histórico, conceitos e definições
+# A Lei Básica da Ciência do Solo
 
 Você já deve ter ouvido falar que a Ciência do Solo nasceu na Rússia e que seu pai foi o cientista russo Vasily Vasili'evich Dokuchaev. Para ser merecedor desse título, Dokuchaev estabeleceu, em 1883, a lei básica da ciência do solo, segundo a qual [@Florinsky2012]
 
 > "qualquer... solo é sempre e em qualquer lugar mera função dos seguintes fatores de formação: (1) a natureza (conteúdo e estrutura) da rocha parental; (2) o clima do terreno; (3) a massa e carácter da vegetação; (4) a idade do terreno; e, finalmente, (5) a topografia do terreno."
 
-Dokuchaev entendia que, se realmente há relação entre as propriedades do solo -- observadas num determinado momento -- e os fatores de formação, então deveria ser possível formular e resolver uma equação matemática que exatamente descreva essa relação. Mas Dokuchaev estava ciente das limitações de seu tempo: era praticamente impossível descrever os fatores de formação do solo em termos quantitativos conforme exigido para resolver qualquer equação matemática. Assim, inicialmente, a lei básica da ciência do solo serviu mais como um conceito geográfico do solo que permitiu compreender melhor a formação e variação do solo no espaço e no tempo. Esse conceito serviu de alicerce para os estudos de muitos cientistas do solo em várias partes do mundo, acelerando o crescimento e desenvolvimento da Ciência do Solo. Foi a partir desse período que foram realizados os primeiros trabalhos de mapeamento moderno do solo, bem como foram criados os primeiros sistemas modernos de classificação do solo.
+Dokuchaev entendia que, se realmente há relação entre as propriedades do solo e os fatores de formação, então deveria ser possível formular e resolver uma equação matemática que descrevesse exatamente como se dá essa relação. Hoje podemos listas inúmeras maneiras de abordar o problema de Dokuchaev. Mas, no final do século XIX, Dokuchaev e seus contemporâneos enfrentavam uma série de limitações. A ideia de mecanismos ou processos de formação do solo ainda não havia sido estabelecidae a (bio)geoquímica ainda dava seus primeiros passos. Os métodos e ferramentas disponíveis não permitiam mensurar com detalhe a complexidade do solo. Descrever os fatores de formação do solo em termos quantitativos, conforme exigido para resolver uma equação matemática, era praticamente impossível. Em resumo, era muito difícil expressar numericamente a relação entre as propriedades do solo e os fatores de formação.
 
-Impulsionados pelo pensamento da época, Dokuchaev e seus contemporâneos, bem como cientistas do solo de outras partes do mundo que vieram depois dele, especialmente nos Estados Unidos da América (EUA), dedicaram-se à elaboração de formulações matemáticas que melhor representassem a lei básica da ciência do solo. Inúmeras equações foram apresentadas, mas aquela proposta originalmente pelo cientista russo Sergey Zakharov, em 1927, foi a única que permaneceu até os dias atuais [@Florinsky2012]. Segundo a equação de Zakharov, provavelmente traduzida para a língua inglesa pelo cientista suíço Hans Jenny [@Jenny1941],
+Impulsionados pelo pensamento da época, Dokuchaev e seus contemporâneos, bem como cientistas do solo de outras partes do mundo que vieram depois dele, especialmente nos Estados Unidos da América (EUA), dedicaram-se à elaboração de formulações matemáticas que melhor representassem a lei básica da ciência do solo. Inúmeras equações foram apresentadas, mas aquela proposta pelo cientista russo Sergey Zakharov [@Florinsky2012] e, posteriormente, pelo cientista suíço Hans Jenny [@Jenny1941], foi a de maior aceitação. Segundo equação de Zakharov-Jenny,
 
-$$s = f(cl, o, r, p, t, \ldots)$$
+$$\pi = f(cl, o, r, p, t, \ldots)$$
 
-onde $s$ refere-se às propriedades do solo num determinado local, as quais são resultado, função, $f$, da interação dos fatores de formação do solo,
+onde $\pi$ refere-se ao solo (do russo _почва_, "pochva") e suas propriedades, as quais são resultado, função, $f$, da interação dos fatores de formação do solo:
 
-* $cl$, que representa o clima, o conjunto de condições meteorológicas atuantes de maneira cíclica e duradoura
-naquele local,
+* $cl$, que representa o clima, o conjunto de condições meteorológicas atuantes de maneira cíclica e duradoura,
 * $o$, que refere-se aos organismos vivos, plantas e animais, inclusive os seres humanos,
 * $r$, que representa o relevo ou topografia, a forma da superfície do terreno,
 * $p$, que indica o material de origem do solo, geralmente um material inconsolidado resultante da alteração das rochas,
 * $t$, que refere-se ao tempo durante o qual os agentes intempéricos agem sobre o material de origem do solo e alteram as características deste, e
-* $\ldots$, que refere-se a outros fatores de formação do solo de menor importância e específicos àquele local.
+* $\ldots$, que refere-se a outros possíveis fatores de formação de menor importância.
 
-Depois de mais de meio século das primeiras tentativas de Dokuchaev e contemporâneos para formular uma equação matemática que expressasse a relação exata entre as propriedades do solo e os fatores de formação, Jenny e seus contemporâneos encontravam-se em situação bem mais favorável. O volume de dados de propriedades do solo existente nos anos 1940 já era bastante grande. Ademais, o período entre guerras, e principalmente durante a II Grande Guerra Mundial, foi marcado por um rápido crescimento do investimento em pesquisas científicas nas áreas da matemática e estatística. Mas mesmo as novas técnicas e ferramentas ainda eram limitadas para encontrar uma solução para a equação de formação do solo. Como alternativa, Jenny propôs determinar, empiricamente, como as propriedades do solo variam com os fatores de formação do solo, ignorando os processos moleculares de natureza geoquímica diretamente envolvidos na formação do solo.
+A lei básica da ciência do solo foi rapidamente adotada pelos cientistas porque fornecia uma base sólida para explicar a formação e variação espacial e temporal do solo [@Smith1986]. Apesar das equações dos fatores de formação do solo terem ficado por mais de meio século sem uma solução quantitativa, elas serviram como importantes conceitos geográficos do solo. Elas foram o alicerce para muitos estudos pedogenéticos em todo o mundo, proporcionando o desenvolvimento dos primeiros trabalhos modernos de mapeamento e taxonomia do solo.
 
-A proposta de Jenny consistia em isolar as variáveis que definem o sistema solo, ou seja, resolver equações onde apenas um único fator de formação do solo fosse permitido variar por vez, mantendo todos os demais constantes. Isso deu origem a um conjunto de cinco equações individuais de formação do solo:
+# Solução empírica da equação dos fatores de formação
 
-* Pedoclimofunção: $s = f_{cl}(clima)_{o, r, p, t, \ldots}$
-* Pedobiofunção: $s = f_{o}(organismos)_{cl, r, p, t, \ldots}$
-* Pedotopofunção: $s = f_r(relevo)_{cl, o, p, t, \ldots}$
-* Pedogeofunção: $s = f_p(material\;parental)_{cl, o, r, t, \ldots}$
-* Pedocronofunção: $s = f_t(tempo)_{cl, o, r, p, \ldots}$
+Passado mais de meio século depois da postulação da lei básica da ciência do solo por Dokuchaev, Jenny e seus contemporâneos encontravam-se em situação mais favorável para solucionar a equação dos fatores de formação. O volume de dados de propriedades do solo existente nos anos 1940 já era relativamente grande. A (bio)geoquímica já estava bem estabelecida e o conhecimento sobre os processos de formação do solo avançava rapidamente. Ademais, o período entre guerras, e principalmente durante a II Grande Guerra Mundial, foi marcado por fortes investimentos em pesquisas científicas, especialmente nas áreas da matemática e estatística.
 
-Ao resolver cada uma das equações individuais e usando derivadas parciais, seria possível quantificar a importância relativa de cada fator de formação e, assim, determinar as mudanças numa propriedade do solo em função das mudanças nos fatores de formação [@Jenny1941, Eq. 5]:
+Dois caminhos diferentes podiam ser tomados para solucionar a equação dos fatores de formação: o primeiro, teórico, utilizando premissas e deduções lógicas; o segundo, empírico, utilizando experimentos e observações de campo. @Jenny1941 propos utilizar o último, segundo o qual a função indeterminada $f$ seria substituída por uma relação quantitativa obtida por meio do estudo da correlação empírica entre as propriedades do solo e os fatores de formação. Sua ideia era determinar como as propriedades do solo variam com os fatores de formação do solo, ignorando assim os processos moleculares de natureza (bio)geoquímica diretamente envolvidos na formação do solo. Para @Jenny1941, a solução mecanística da equação dos fatores de formação, além de muito complexa, dependia demasiadamente de especulações teóricas sobre os processos pedogenéticos.
 
-$$ds = \left(\frac{\delta s}{\delta cl}\right)_{o, r, p, t, \ldots}dcl + \left(\frac{\delta s}{\delta o}\right)_{cl, r, p, t, \ldots}do + \left(\frac{\delta s}{\delta r}\right)_{cl, o, p, t, \ldots}dr + \left(\frac{\delta s}{\delta p}\right)_{cl, o, r, t, \ldots}dp + \left(\frac{\delta s}{\delta t}\right)_{cl, o, r, p, \ldots}dt$$
+A proposta empírica de @Jenny1941 consistia em isolar as variáveis que definem o sistema solo. Seriam formuladas e resolvidas equações onde apenas um único fator de formação fosse permitido variar por vez. Todos os demais fatores seriam mantidos constantes. Isso deu origem ao conjunto de cinco equações individuais de formação do solo:
 
-Entretanto, ainda não era possível representar quantitativamente alguns dos mais importantes fatores de formação como o material de origem e os organismos. Também era impossível delinear estudos empíricos em que os fatores de formação do solo pudessem ser efetivamente mantidos constantes e que as interrelações entre eles pudessem ser eliminadas. Isso resultava em grande variação nos dados obtidos, boa parte dela de natureza desconhecida, impossibilitando assim a determinação de relações exatas. Como solução, Jenny propôs que fossem introduzidas "considerações estatísticas", com dados analisados em gráficos de dispersão, e que as equações resultantes fossem compreendidas apenas como descrições de tendências gerais de variação das propriedades do solo em função dos fatores de formação.
+* Pedoclimofunção: $\pi = f_{cl}(clima)_{o, r, p, t, \ldots}$
+* Pedobiofunção: $\pi = f_{o}(organismos)_{cl, r, p, t, \ldots}$
+* Pedotopofunção: $\pi = f_r(relevo)_{cl, o, p, t, \ldots}$
+* Pedolitofunção: $\pi = f_p(material\;parental)_{cl, o, r, t, \ldots}$
+* Pedocronofunção: $\pi = f_t(tempo)_{cl, o, r, p, \ldots}$
+
+Ao resolver cada uma das equações individuais seria possível verificar a importância de cada fator na formação do solo. A importância relativa de cada fator de formação poderia então ser verificada usando derivativas parciais. Com estas, seria possível determinar as mudanças numa propriedade do solo em função das mudanças em um ou mais fatores de formação [@Jenny1941, Eq. 5]:
+
+$$d\pi = \left(\frac{\delta s}{\delta cl}\right)_{o, r, p, t, \ldots}dcl + \left(\frac{\delta s}{\delta o}\right)_{cl, r, p, t, \ldots}do + \left(\frac{\delta s}{\delta r}\right)_{cl, o, p, t, \ldots}dr + \left(\frac{\delta s}{\delta p}\right)_{cl, o, r, t, \ldots}dp + \left(\frac{\delta s}{\delta t}\right)_{cl, o, r, p, \ldots}dt$$
+
+Na prática, a solução das equações individuais consistia em organizar os dados da propriedade do solo sob estudo e do fator de formação considerado em um gráfico de dispersão e, então, ajustar uma curva à nuvem de pontos. Experimentos de laboratório permitiam ajustar funções exatas aos dados. Contudo, com observações de campo, era impossível manter os fatores de formação constantes e eliminar as interrelações entre eles. Isso resultava em grande variação nos dados, boa parte dela de natureza desconhecida, impossibilitando assim a determinação de relações empíricas exatas. Por esse motivo, @Jenny1941 enfatizou que era preciso introduzir "considerações estatísticas" na análise da correlação entre as propriedades do solo e os fatores de formação. As equações resultantes deveriam ser compreendidas apenas como, aproximações, descrições de tendências gerais de variação das propriedades do solo em função dos fatores de formação. Correlação entre propriedade do solo e fator de formação não necessariamente indicaria relação causal direta. Para @Jenny1941, sua solução empírica para a equação dos fatores de formação não elucidava os processos pedogenéticos: para isso seria preciso lançar mão de análises mais complexas (mecanísticas).
+
+
+Entretanto, ainda não era possível representar quantitativamente alguns dos mais importantes fatores de formação como o material de origem e os organismos.
+
+
 
 Jenny reconheceu a incerteza inerente aos estudos sobre a (cor)relação entre as propriedades do solo e os fatores de formação. Por essa razão ele apontou a necessidade de introduzir "considerações estatísticas" e analisar os dados utilizando gráficos de dispersão. Contudo, ele não lançou mão de métodos que levassem em consideração a incereteza de maneira explícita, principalmente porque o conceito de incerteza ainda não estava plenamente desenvolvido na época.
 
 As pedofunções tiveram grande utilidade nos estudos sobre a gênese do solo nos mais diversos ambientes, sendo amplamente utilizadas ainda hoje.
+
+
 
 A corrida espacial que seguiu à II Grande Guerra Mundial teve grande influência sobre a maneira de conduzir novos estudos sobre a variação espacial e temporal do solo, sobretudo a partir dos anos 1960. A produção periódica de dados com cobertura global pelos inúmeros sensores desenvolvidos para observação da superfície e acoplados a satélites orbitais mudaram completamente a maneira de vermos nosso planeta. O advento da Internet e a abertura econômica de diversos países a partir dos anos 1980 facilitaram o acesso dos cientistas do solo a um grande volume de dados relativamente detalhados sobre condições meteorológicas, cobertura vegetal, uso antrópico e relevo, tanto em escala local como global. Não demorou muito para que os cientistas do solo percebessem que os dados sobre as características dos diversos componentes ambientais forneciam uma solução relativamente eficiente para um dos problemas de Dokuchaev, qual seja, a necessidade de descrever numericamente os fatores de formação do solo para que fosse possível resolver a equação matemática da lei básica da ciência do solo [@MooreEtAl1993].
 
